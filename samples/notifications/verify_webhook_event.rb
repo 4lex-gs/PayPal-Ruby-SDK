@@ -8,14 +8,14 @@ include PayPal::SDK::Core::Logging
 # For more information: https://github.com/paypal/PayPal-Ruby-SDK/issues/205#issuecomment-249051953
 # webhook headers required for event verification
 
-# actual_signature = request.headers["Paypal-Transmission-Sig"]
-# auth_algo        = request.headers["Paypal-Auth-Algo"]
+# actual_signature = request.headers["PAYPAL-TRANSMISSION-SIG"]
+# auth_algo        = request.headers["PAYPAL-AUTH-ALGO"]
 # auth_algo.sub!(/withRSA/i, "")
-# cert_url         = request.headers["Paypal-Cert-Url"]
-# transmission_id  = request.headers["Paypal-Transmission-Id"]
-# timestamp        = request.headers["Paypal-Transmission-Time"]
+# cert_url         = request.headers["PAYPAL-CERT-URL"]
+# transmission_id  = request.headers["PAYPAL-TRANSMISSION-ID"]
+# timestamp        = request.headers["PAYPAL-TRANSMISSION-TIME"]
 # webhook_id       = ENV['PAYPAL_WEBHOOK_ID'] #The webhook_id provided by PayPal when webhook is created on the PayPal developer site
-# event_body       = params["paypal"].to_json
+# event_body       = request.body.read
 
 # MOCK DATA for Sample purpose only. Please use above code for real use cases.
 # Paypal-Transmission-Sig header
